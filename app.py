@@ -3,7 +3,7 @@ import joblib
 import pandas as pd
 
 # Load trained pipeline (includes preprocessing + model)
-model = joblib.load("german_credit_model.pkl")
+model = joblib.load("german_credit.joblib")
 
 st.title("German Credit Risk Prediction")
 st.write("Fill in the details below to predict creditworthiness.")
@@ -138,3 +138,4 @@ if st.button("Predict Credit Risk"):
 
     st.write(f"Probability of Good Credit: {proba[1]:.2f}")
     st.write(f"Probability of Bad Credit: {proba[0]:.2f}")
+
